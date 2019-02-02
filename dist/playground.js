@@ -129,7 +129,12 @@ class Playground {
     placeCell(player, position) {
         const y = Math.floor((position - 1) / this.size);
         const x = (position - 1) % this.size;
-        this.playground[y][x] = player;
+        if (this.playground[y][x] === 'X' || this.playground[y][x] === 'O') {
+            throw new Error("The position is occupied");
+        }
+        else {
+            this.playground[y][x] = player;
+        }
     }
 }
 exports.default = Playground;

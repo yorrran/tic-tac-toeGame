@@ -1,0 +1,35 @@
+{
+  "name": "ticgame",
+  "version": "1.0.0",
+  "description": "this is for fun",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tic",
+    "game"
+  ],
+  "author": "yaran",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "skeleton": "^0.1.2",
+    "skeleton-css": "^2.0.4",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.19",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "prettier": "^1.16.1",
+    "readline-sync": "^1.4.9",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.4"
+  }
+}

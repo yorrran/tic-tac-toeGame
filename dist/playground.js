@@ -107,7 +107,6 @@ class Playground {
      */
     checkWin() {
         const horizontal = [...this.playground];
-        console.log("horizontal:", horizontal);
         const vertical = this.playground.map((row, i) => this.playground.map(col => col[i]));
         const diagonal = [
             this.playground.map((row, i, array) => array[i][i]),
@@ -129,7 +128,7 @@ class Playground {
     placeCell(player, position) {
         const y = Math.floor((position - 1) / this.size);
         const x = (position - 1) % this.size;
-        if (this.playground[y][x] === 'X' || this.playground[y][x] === 'O') {
+        if (this.players.includes(this.playground[y][x])) {
             throw new Error("The position is occupied");
         }
         else {

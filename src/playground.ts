@@ -10,7 +10,7 @@ class Playground {
     private size: number = 3;
     private userSize : number;
     private movementTimes: number = 0;
-    private players: string[] = ['X', 'O'];
+    private players = ['X', 'O'];
     private playground: string[][] = [];
     private questionQueue: IQuestion[] = [];
 
@@ -154,7 +154,7 @@ class Playground {
     private placeCell(player: string, position: number) {
         const y = Math.floor((position - 1) / this.size);
         const x = (position - 1) % this.size;
-        if(this.playground[y][x]=== 'X' || this.playground[y][x]==='O'){
+        if(this.players.includes(this.playground[y][x])){
             throw new Error("The position is occupied");
         } else {
             this.playground[y][x] = player;

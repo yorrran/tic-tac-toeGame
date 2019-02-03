@@ -154,7 +154,7 @@ class Playground {
     private placeCell(player: string, position: number) {
         const y = Math.floor((position - 1) / this.size);
         const x = (position - 1) % this.size;
-        if(this.players.includes(this.playground[y][x])){
+        if(this.players.includes(this.playground[y][x])){ //make the program extensible
             throw new Error("The position is occupied");
         } else {
             this.playground[y][x] = player;
